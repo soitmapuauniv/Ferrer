@@ -28,28 +28,12 @@
             font-size: 30px;
         }
         #about {
-            display: flex;
-            background-image: url('https://wallpapers.com/images/hd/disney-4k-gkwca18qluofxgum.jpg'); /* Change to your image */
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(to right, red, yellow, black);
             color: white;
-            font-size: 15px;
         }
-        #profile {
-            display: flex;
-            background-image: url('https://insidebitcoins.com/wp-content/uploads/2024/09/810f37fbc55742dabb7dd89fcaf1d6f5.jpeg'); /* Change to your image */
-            background-size: cover;
-            background-position: center;
-            color: gold;
-            font-size: 15px;
-        }
-        #achievements {
-            display: flex;
-            background-image: url('https://www.topuniversities.com/sites/default/files/styles/736x304/public/guides/lead-bg-images/file%20-%202024-07-23T150458.046.jpg.webp'); /* Change to your image */
-            background-size: cover;
-            background-position: center;
-            color: gold;
-            font-size: 15px;
+        #profile, #achievements, #courseprogress {
+            background-color: #f4f4f4;
+            color: black;
         }
         img {
             width: 200px;
@@ -80,12 +64,22 @@
             transform: translateX(-50%);
         }
         .nav button {
+            padding: 10px 20px;
             margin: 5px;
             cursor: pointer;
             border: none;
-            background-color: transparent;
-            color: Black;
-            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.25);
+            color: black;
+            font-size: 24px;
+            font-family: 'Open Sans';
+        }
+        
+        footer {
+            background-color: #000000;
+            padding: 5px;
+            color: white;
+            text-align: center;
+            font-family: 'Open Sans';
         }
     </style>
 </head>
@@ -95,7 +89,9 @@
         <button onclick="showPage('home')">Home</button>
         <button onclick="showPage('about')">About Me</button>
         <button onclick="showPage('profile')">Profile</button>
+        <button onclick="showPage('courseprogress')">Course Progress</button>
         <button onclick="showPage('achievements')">Achievements</button>
+        <font-family: 'Open Sans';>
     </div>
 
     <div id="home" class="page" style="display: flex;">
@@ -117,12 +113,22 @@
         <h2>Degree/Program: Grade 12-STEM y</h2>
         <h2>School: Mapua University </h2>
     </div>
+    
+    <div id="courseprogress" class="page">
+        <img src="" alt="">
+        <h1><strong>Course Progress</strong></h1>
+        <h2> </h2>
+        <h2></h2>
+        <h2></h2>
+        <h2> </h2>
+    </div>
 
     <div id="achievements" class="page">
         <h1><strong>Achievements</strong></h1>
         <img src="your-achievement-photo.jpg" alt="Your Achievement Photo">
         <ul>
-            <li>🏆 Without Honors S.Y. 2029-3052</li>
+            <li>🏆 With Honors A.Y. 2019-2022</li>
+            <li>🎓 BEst in English</li>
             <li>💻 Completed a Data Science Internship</li>
             <li>📝 Published a Research Paper on The Effect of Screentime On The Academic Performance of Students</li>
         </ul>
@@ -137,6 +143,10 @@
             document.getElementById(page).style.display = 'flex';
         }
     </script>
+    
+            <footer>
+            <p>&copy; 2024 School of Information Technology. All rights reserved.</p>
+        </footer>
 
 </body>
 </html>
