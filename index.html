@@ -10,6 +10,8 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
         }
         .page {
             display: none;
@@ -21,19 +23,24 @@
         }
         #home {
             display: flex;
-            background-image: url('https://www.iamag.co/wp-content/uploads/2017/07/cover-yourname.jpg'); /* Change to your image */
+            background-image: url('https://images4.alphacoders.com/659/659855.jpg'); /* Change to your image */
             background-size: cover;
             background-position: center;
-            color: white;
+            color: black;
             font-size: 30px;
         }
         #about {
-            background: linear-gradient(to right, red, yellow, black);
-            color: white;
-        }
-        #profile, #achievements, #courseprogress {
-            background-color: #f4f4f4;
+            display: flex;
+            background-image: url('https://www.iamag.co/wp-content/uploads/2017/07/cover-yourname.jpg?fbclid=IwY2xjawIXcglleHRuA2FlbQIxMAABHRbEXfoGivT6lJcuSu-dBYLdhNJt5ZvIH_mXUToGAb8-ooUsV_iB-ICcqg_aem_t0eQGDK4GmqlPgQiBStKtw'); /* Change to your image */
+            background-size: cover;
+            background-position: center;
             color: black;
+            font-size: 30px;
+        }
+        #profile, #achievements, #courseprogress, #bestpic {
+            background-color: #545454;
+            color: black;
+            font-family: 'Open Sans';
         }
         img {
             width: 200px;
@@ -64,14 +71,26 @@
             transform: translateX(-50%);
         }
         .nav button {
+            display: inline-block;
             padding: 10px 20px;
             margin: 5px;
             cursor: pointer;
             border: none;
             background-color: rgba(0, 0, 0, 0.25);
-            color: black;
+            color: white;
             font-size: 24px;
             font-family: 'Open Sans';
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 1s ease, transform 0.2s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: #000000;
+        }
+        
+        .nav-button:active {
+            transform: scale(0.95);
         }
         
         footer {
@@ -90,12 +109,14 @@
         <button onclick="showPage('about')">About Me</button>
         <button onclick="showPage('profile')">Profile</button>
         <button onclick="showPage('courseprogress')">Course Progress</button>
+        <button onclick="showPage('bestpic')">Best Pictures</button>
         <button onclick="showPage('achievements')">Achievements</button>
-        <font-family: 'Open Sans';>
+        <font-family: 'Open Sans'>
     </div>
 
     <div id="home" class="page" style="display: flex;">
         <h1 style="font-family: 'Courier New', monospace;">Information Technology Student Portfolio</h1>
+
     </div>
 
     <div id="about" class="page">
@@ -120,6 +141,16 @@
         <h2> </h2>
         <h2></h2>
         <h2></h2>
+        <h2> </h2>
+    </div>
+    
+        <div id="bestpic" class="page">
+        <img src="https://tiermaker.com/images/template_images/2022/1185057/dreamy-bull-video-tier-list--1185057/15png.png" alt="Mariux Loves Men">
+        <img src="https://i.pinimg.com/736x/6e/da/25/6eda251c8069ca80231fac522127bbf4.jpg">
+        <h1><strong>Mariux Loves Men</strong></h1>
+        <h2> </h2>
+        <h2> </h2>
+        <h2> </h2>
         <h2> </h2>
     </div>
 
